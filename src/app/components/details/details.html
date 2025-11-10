@@ -8,7 +8,7 @@
         @for (item of productItem.imagenes; track $index) {
         <ng-template ngbSlide>
           <div class="picsum-img-wrapper">
-            <img [src]="'http://localhost:3000' + item.imageUrl" alt="Random first slide" />
+            <img [src]="'/api1' + item.imageUrl" alt="Random first slide" />
           </div>
           <div class="carousel-caption">
             <h3>{{productItem.name}}</h3>
