@@ -40,8 +40,9 @@ export class Payment {
   async ngOnInit() {
     // Carga la librería de Stripe.js de forma asíncrona
     this.stripe = await loadStripe(
-      'pk_live_51SShOjLFHRmo7hPcGFYAz5D2c3C9F93xl9nCwts9e8EPSWcElT8U1laGFrwgHkJWhsEpOe6Px5fb4LH8RJn8PzF4004dO3Wcrl'
-    ); // <--- ¡PON TU CLAVE pk_test_... AQUÍ!
+      'pk_live_51SShOjLFHRmo7hPcGFYAz5D2c3C9F93xl9nCwts9e8EPSWcElT8U1laGFrwgHkJWhsEpOe6Px5fb4LH8RJn8PzF4004dO3Wcrl',{
+  locale: 'de' // ← Aquí cambias el idioma
+}); // <--- ¡PON TU CLAVE pk_test_... AQUÍ!
 
     if (this.stripe) {
       this.setupStripeElement();
