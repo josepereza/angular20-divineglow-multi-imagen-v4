@@ -16,3 +16,21 @@
 .admin-link a {
   color: #ffc107;
 }
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem; /* Espacio entre los iconos */
+  margin-top: 0.5rem;
+}
+
+.payment-icons svg {
+  /* Opcional: añade un pequeño efecto al pasar el ratón */
+  transition: transform 0.2s ease-in-out;
+}
+
+.payment-icons svg:hover {
+  transform: scale(1.1);
+}
+

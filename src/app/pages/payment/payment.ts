@@ -40,7 +40,7 @@ export class Payment {
   async ngOnInit() {
     // Carga la librería de Stripe.js de forma asíncrona
     this.stripe = await loadStripe(
-      'pk_test_51KwttKJhfdXMP2PM1eyZwmyTnW37LyaYzXB4xe0Hn13Y1NHPNUj4FVlVg4NoGLym1SO38P5WJrM0UbgWbMKScooI0000eFuVzO'
+      'pk_live_51SShOjLFHRmo7hPcGFYAz5D2c3C9F93xl9nCwts9e8EPSWcElT8U1laGFrwgHkJWhsEpOe6Px5fb4LH8RJn8PzF4004dO3Wcrl'
     ); // <--- ¡PON TU CLAVE pk_test_... AQUÍ!
 
     if (this.stripe) {
@@ -85,12 +85,12 @@ export class Payment {
     // --- 1. VALIDACIONES INICIALES ---
     const customer = this.cartService.customerInfo();
     if (!customer) {
-        alert("Error: Faltan datos del cliente. Redirigiendo al checkout.");
+        alert("Fehler: Kundendaten fehlen. Weiterleitung zur Kasse.");
         this.router.navigate(['/checkout']);
         return;
     }
     if (this.isLoading() || !this.stripe || !this.cardElement || !this.cardholderName) {
-      this.cardError.set('Por favor, completa todos los campos.');
+      this.cardError.set('Bitte füllen Sie alle Felder aus.');
       return;
     }
     this.isLoading.set(true);
@@ -103,7 +103,7 @@ export class Payment {
     });
 
     if (error) {
-      this.cardError.set(error.message || 'Error al validar la tarjeta.');
+      this.cardError.set(error.message || 'Fehler bei der Kartenvalidierung.');
       this.isLoading.set(false);
       return;
     }
@@ -146,7 +146,7 @@ export class Payment {
       next: () => {
         // --- ÉXITO TOTAL: Se ejecuta solo si TODAS las llamadas anteriores tuvieron éxito ---
         console.log('¡Proceso de compra completado con éxito!');
-        alert('¡Pago y pedido realizados con éxito! Recibirás un correo de confirmación.');
+        alert('¡Zahlung und Bestellung erfolgreich abgeschlossen! Sie erhalten eine Bestätigungs-E-Mail.');
         
         this.cartService.clearCart();
         this.router.navigate(['/']);
@@ -154,7 +154,7 @@ export class Payment {
       error: (err) => {
         // --- MANEJO DE ERRORES: Se ejecuta si CUALQUIERA de las llamadas falla ---
         console.error('Ha ocurrido un error en el proceso de compra:', err);
-        this.cardError.set(err.error?.message || 'No se pudo completar el proceso de compra.');
+        this.cardError.set(err.error?.message || 'Der Kaufvorgang konnte nicht abgeschlossen werden..');
         this.isLoading.set(false); // Reactivamos el botón para que pueda intentarlo de nuevo
       }
     });

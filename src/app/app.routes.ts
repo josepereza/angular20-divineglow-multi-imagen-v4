@@ -10,6 +10,9 @@ import { ProductFormComponent } from './admin/pages/product-form/product-form';
 import { authGuard } from './admin/guards/auth-guard';
 import { Login } from './admin/pages/login/login';
 import { Payment } from './pages/payment/payment';
+import { Agb } from './components/agb/agb';
+import { Impressum } from './components/impressum/impressum';
+import { Datenschutz } from './components/datenschutz/datenschutz';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -24,6 +27,9 @@ export const routes: Routes = [
   { path: 'cart', component: Cart },
   { path: 'checkout', component: Checkout },
   { path: 'payment', component: Payment },
+  { path: 'agb', component: Agb },
+  { path: 'impressum', component: Impressum },
+  { path: 'datenschutz', component: Datenschutz },
 
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

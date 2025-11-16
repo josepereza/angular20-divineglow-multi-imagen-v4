@@ -12,7 +12,7 @@
             @for (item of cartService.cartItems(); track $index) {
 
  <li  class="list-group-item d-flex align-items-center">
-            <img [src]="'http://localhost:3000' + item.imagenes[0].imageUrl" [alt]="item.name" width="100px" class="cart-item-image me-3">
+            <img [src]="'/api1' + item.imagenes[0].imageUrl" [alt]="item.name" width="100px" class="cart-item-image me-3">
             <div class="flex-grow-1">
               <h5 class="item-name mb-1">{{ item.name }}</h5>
               <p class="mb-1 text-muted">{{ item.price | currency:'CHF' }}</p>

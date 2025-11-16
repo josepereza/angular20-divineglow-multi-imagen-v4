@@ -12,6 +12,6 @@ import { CurrencyPipe } from '@angular/common';
 export class ProductList {
 productService=inject(ProductoService)
 productos=this.productService.getProductsRs()
-misproductos=computed(()=>this.productos!.value())
+//misproductos=computed(()=>this.productos!.value())
 
 }

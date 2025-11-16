@@ -3,7 +3,7 @@
     <div class="col-md-8 col-lg-6">
       <div class="card shadow">
         <div class="card-header bg-primary text-white text-center">
-          <h4>Pago Seguro</h4>
+          <h4>Zahlung</h4>
         </div>
         <div class="card-body p-4">
           <form id="payment-form" (ngSubmit)="handleSubmit()">
@@ -11,7 +11,7 @@
             <!-- ***** CAMBIO AQUÍ: AÑADIMOS EL CAMPO PARA EL NOMBRE ***** -->
             <div class="mb-3">
               <label for="cardholder-name" class="form-label">
-                Nombre en la Tarjeta
+                Name des Karteninhabers
               </label>
               <!-- Usamos ngModel para vincular este campo a una variable en nuestro componente -->
               <input 
@@ -27,7 +27,7 @@
             <!-- El elemento de la tarjeta de Stripe no cambia -->
             <div class="mb-3">
               <label for="card-element" class="form-label">
-                Datos de la Tarjeta de Crédito
+                Kreditkartendaten
               </label>
               <div id="card-element" #cardElement></div>
             </div>
@@ -44,7 +44,7 @@
                 @if(isLoading()) {
                   <!-- ... spinner ... -->
                 } @else {
-                  <span>Pagar {{ cartService.totalPrice() | currency:'CHF' }}</span>
+                  <span>Jetzt kaufen {{ cartService.totalPrice() | currency:'CHF' }}</span>
                 }
               </button>
             </div>

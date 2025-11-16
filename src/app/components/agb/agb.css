@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  background-color: #f8f9fa; /* Un fondo suave para toda la página */
+}
+
+.agb-container .card {
+  border: none; /* Quitamos el borde por defecto de la tarjeta */
+}
+
+.agb-section {
+  margin-bottom: 2.5rem; /* Aumenta el espacio entre secciones */
+}
+
+.agb-section h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #dee2e6; /* Línea sutil para separar el título */
+}
+
+.agb-section p,
+.agb-section li {
+  line-height: 1.7; /* Aumenta la altura de línea para mejor legibilidad */
+  color: #495057;
+  text-align: justify; /* Justifica el texto para un look más formal */
+}
+
+.agb-section ol {
+  padding-left: 1.5rem; /* Alinea la lista ordenada */
+}
+
+.alert-heading {
+  font-weight: bold;
+}
