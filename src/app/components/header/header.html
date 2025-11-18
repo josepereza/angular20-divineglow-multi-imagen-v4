@@ -15,13 +15,11 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/products" routerLinkActive="active" (click)="isMenuCollapsed = true">Produkte</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cart" routerLinkActive="active" (click)="isMenuCollapsed = true">
+             </ul>
+    </div>
+     <a class="nav-link text-white" routerLink="/cart" routerLinkActive="active" (click)="isMenuCollapsed = true">
             <i class="bi bi-cart"></i> Warenkorb
             <span class="badge bg-dark ms-1">{{ cartService.totalItems() }}</span> 
           </a>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>
