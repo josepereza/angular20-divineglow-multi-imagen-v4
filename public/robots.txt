@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://divineglow.ch/sitemap.xml
+
+Disallow: /admin
+Disallow: /login
+Disallow: /checkout
+Disallow: /payment
+Disallow: /pedidos
+
+Crawl-delay: 2
