@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './datenschutz.html',
   styleUrl: './datenschutz.css'
 })
-export class Datenschutz {
+export default  class Datenschutz {
 
 }

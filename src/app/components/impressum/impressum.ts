@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './impressum.html',
   styleUrl: './impressum.css'
 })
-export class Impressum {
+export default class Impressum {
 
 }

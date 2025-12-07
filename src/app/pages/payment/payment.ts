@@ -16,7 +16,7 @@ import { switchMap } from 'rxjs';
   templateUrl: './payment.html',
   styleUrl: './payment.css',
 })
-export class Payment {
+export default class Payment {
   cardholderName: string = '';
 
   // Inyección de dependencias

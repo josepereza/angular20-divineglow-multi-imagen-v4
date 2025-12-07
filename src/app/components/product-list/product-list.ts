@@ -9,7 +9,7 @@ import { CurrencyPipe } from '@angular/common';
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
 })
-export class ProductList {
+export default class ProductList {
 productService=inject(ProductoService)
 productos=this.productService.getProductsRs()
 //misproductos=computed(()=>this.productos!.value())

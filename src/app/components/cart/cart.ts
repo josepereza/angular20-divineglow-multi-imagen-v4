@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './cart.html',
   styleUrl: './cart.css'
 })
-export class Cart {
+export default class Cart {
   constructor(public cartService: CartService) {}
 
 }

@@ -12,7 +12,7 @@ import { PedidoService } from '../../services/pedidoService';
   templateUrl: './checkout.html',
   styleUrl: './checkout.css'
 })
-export class Checkout {
+export default class Checkout {
 // Inyección de dependencias
   private fb = inject(FormBuilder);
   private cartService = inject(CartService);

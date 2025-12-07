@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth-service';
   templateUrl: './product-list-admin.html',
   styleUrl: './product-list-admin.css',
 })
-export class ProductListAdmin {
+export default class ProductListAdmin {
   private service = inject(ProductServiceAdmin);
   private fb = inject(FormBuilder);
   private auth = inject(AuthService);

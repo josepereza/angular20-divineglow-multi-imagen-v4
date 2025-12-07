@@ -8,7 +8,7 @@ import { AuthService } from '../../services/auth-service';
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
-export class Login {
+export default class Login {
 private fb = inject(FormBuilder);
   private auth = inject(AuthService);
 

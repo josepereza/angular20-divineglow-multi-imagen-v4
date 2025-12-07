@@ -16,7 +16,7 @@ import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap
   providers: [NgbCarouselConfig],
 
 })
-export class Details {
+export default class Details {
 
   constructor(config: NgbCarouselConfig) {
 		// customize default values of carousels used by this component tree

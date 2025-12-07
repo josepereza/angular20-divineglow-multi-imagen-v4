@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './agb.html',
   styleUrl: './agb.css'
 })
-export class Agb {
+export default class Agb {
 
 }

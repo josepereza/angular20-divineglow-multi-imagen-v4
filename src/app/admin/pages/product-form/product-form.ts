@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { Product } from '../../../interfaces/product';
 import { ProductServiceAdmin } from '../../services/product-service-admin';
-import { ProductListAdmin } from '../product-list-admin/product-list-admin';
 
 @Component({
   selector: 'product-form',
