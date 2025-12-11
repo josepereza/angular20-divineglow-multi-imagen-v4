@@ -1,7 +1,30 @@
 <div class="container py-5">
   <h2 class="text-center mb-5">Nuestra Colección</h2>
   <div class="row">
-    @for (product of productos(); track $index) {
+    <div class="filtros">
+  <button 
+    (click)="mostrarConSchmuck()"
+    [class.active]="filtro() === 'con'"
+    class="btn">
+    Schmuck
+  </button>
+
+  <button 
+    (click)="mostrarSinSchmuck()"
+    [class.active]="filtro() === 'sin'"
+    class="btn">
+    Taschen
+  </button>
+
+  <button 
+    (click)="mostrarTodos()"
+    [class.active]="filtro() === 'todos'"
+    class="btn btn-secondary">
+    Alle
+  </button>
+</div>
+<hr>
+    @for (product of productosFiltrados(); track $index) {
          <div class="col-md-6 col-lg-4 mb-4" >
       <div class="card product-card h-100" [routerLink]="['/product', product.id]">
         <img [src]="'/api1' + product.imagenes[0]?.imageUrl" class="card-img-top" [alt]="product.name" style="object-position: center;">
@@ -11,7 +34,7 @@
         </div>
         <div class="card-footer">
           <span class="price">{{ product.price | currency:'CHF' }}</span>
-          <button class="btn btn-dark">Details</button>
+          <button class="btn btn-detail btn-dark">Details</button>
         </div>
       </div>
     </div>
