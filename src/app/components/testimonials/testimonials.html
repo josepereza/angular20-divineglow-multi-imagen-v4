@@ -1,0 +1,25 @@
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title text-center" appScrollAnimation>Was unsere Kundinnen sagen</h2>
+    <div class="row">
+      @for (t of testimonials; track t.name; let i = $index) {
+        <div class="col-lg-3 col-md-6 mb-4" [appScrollAnimation]="i * 150 + 'ms'">
+          <div class="testimonial-card">
+            <div class="stars">
+              @for (star of [1,2,3,4,5]; track star) {
+                <svg class="star" [class.filled]="star <= t.rating" viewBox="0 0 20 20" width="18" height="18">
+                  <path d="M10 1l2.39 4.84 5.33.78-3.86 3.76.91 5.31L10 13.27l-4.77 2.51.91-5.31L2.28 6.62l5.33-.78L10 1z"/>
+                </svg>
+              }
+            </div>
+            <p class="testimonial-text">"{{ t.text }}"</p>
+            <div class="testimonial-author">
+              <img [src]="t.avatar" [alt]="t.name" class="avatar" loading="lazy">
+              <span class="name">{{ t.name }}</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

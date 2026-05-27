@@ -40,3 +40,5 @@ textarea.form-control {
 html, body, app-root { height: 100%; margin: 0; }
 app-root { display:flex; flex-direction:column; min-height:100vh; }
 main.app-main { flex:1 1 auto; }
+
+/* === Scroll Animation Classes (Intersection Observer) === */

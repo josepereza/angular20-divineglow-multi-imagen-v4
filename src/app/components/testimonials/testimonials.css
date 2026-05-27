@@ -1,0 +1,75 @@
+.testimonials-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 215, 0, 0.04) 50%, transparent 100%);
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.star {
+  fill: #444;
+  transition: fill 0.3s ease;
+}
+
+.star.filled {
+  fill: #ffd700;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.5));
+}
+
+.testimonial-text {
+  color: #ccc;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}

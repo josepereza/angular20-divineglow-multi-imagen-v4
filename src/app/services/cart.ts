@@ -23,6 +23,10 @@ export class CartService {
   totalItems = computed(() => this.cartItems().length);
   totalPrice = computed(() => this.cartItems().reduce((acc, item) => acc + item.price, 0));
 
+  // Gastos de envío fijos
+  shippingCost = 8;
+  totalWithShipping = computed(() => this.totalPrice() + this.shippingCost);
+
   // ***** NUEVO SIGNAL PARA LOS DATOS DEL CLIENTE *****
   // Lo inicializamos como nulo
   customerInfo = signal<CustomerInfo | null>(null);

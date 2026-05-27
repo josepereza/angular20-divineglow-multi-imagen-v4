@@ -110,7 +110,7 @@ export default class Payment {
     }
     
     // --- 3. SECUENCIA DE LLAMADAS AL BACKEND CON RXJS ---
-    const amount = this.cartService.totalPrice();
+    const amount = this.cartService.totalWithShipping();
     const cartItems = this.cartService.cartItems();
 
     this.paymentService.processPayment(paymentMethod!.id, amount).pipe(

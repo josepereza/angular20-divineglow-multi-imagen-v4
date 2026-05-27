@@ -1,6 +1,23 @@
-.item-name{
-    font-size: 0.9em;
+.item-name {
+  font-size: 0.9em;
 }
 .carrito {
-    height: 100vh;
+  min-height: 60vh;
+}
+
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.card-title {
+  color: #fff;
 }

@@ -44,7 +44,7 @@
                 @if(isLoading()) {
                   <!-- ... spinner ... -->
                 } @else {
-                  <span>Jetzt kaufen {{ cartService.totalPrice() | currency:'CHF' }}</span>
+                  <span>Jetzt kaufen {{ cartService.totalWithShipping() | currency:'CHF' }}</span>
                 }
               </button>
             </div>

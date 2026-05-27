@@ -24,8 +24,8 @@
   </button>
 </div>
 <hr>
-    @for (product of productosFiltrados(); track $index) {
-         <div class="col-md-6 col-lg-4 mb-4" >
+    @for (product of productosFiltrados(); track product.id; let i = $index) {
+         <div class="col-md-6 col-lg-4 mb-4" [appScrollAnimation]="i * 100 + 'ms'">
       <div class="card product-card h-100" [routerLink]="['/product', product.id]">
         <img [src]="'/api1' + product.imagenes[0]?.imageUrl" class="card-img-top" [alt]="product.name" style="object-position: center;">
         <div class="card-body">

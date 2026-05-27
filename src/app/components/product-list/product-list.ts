@@ -2,10 +2,11 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { ProductoService } from '../../services/productService';
 import { RouterLink } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-product-list',
-  imports: [RouterLink,CurrencyPipe],
+  imports: [RouterLink, CurrencyPipe, ScrollAnimationDirective],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
 })
