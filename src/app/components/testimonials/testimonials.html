@@ -1,6 +1,6 @@
 <section class="testimonials-section">
   <div class="container">
-    <h2 class="section-title text-center" appScrollAnimation>Was unsere Kundinnen sagen</h2>
+    <h2 class="section-title text-center" appScrollAnimation>Kundenbewertungen</h2>
     <div class="row">
       @for (t of testimonials; track t.name; let i = $index) {
         <div class="col-lg-3 col-md-6 mb-4" [appScrollAnimation]="i * 150 + 'ms'">
@@ -12,7 +12,7 @@
                 </svg>
               }
             </div>
-            <p class="testimonial-text">"{{ t.text }}"</p>
+            <p class="testimonial-text">{{ t.text }}</p>
             <div class="testimonial-author">
               <img [src]="t.avatar" [alt]="t.name" class="avatar" loading="lazy">
               <span class="name">{{ t.name }}</span>

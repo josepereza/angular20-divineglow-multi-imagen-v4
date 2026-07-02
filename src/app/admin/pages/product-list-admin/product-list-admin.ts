@@ -31,7 +31,7 @@ export default class ProductListAdmin {
     name: ['', Validators.required],
     description: ['', Validators.required],
     price: [0, [Validators.required, Validators.min(0)]],
-    stock: [0, [Validators.required, Validators.min(1)]],
+    stock: [0, [Validators.required, Validators.min(0)]],
   });
 
   selectedFiles: File[] = [];
