@@ -13,7 +13,7 @@
 }
 
 .card-img-top {
-  height: 410px;
+  height: 310px;
   object-fit: cover;
 }
 
@@ -22,16 +22,24 @@
 }
 
 .card-footer {
+  flex-shrink: 0;
+  min-height: 90px;
+  padding: 10px 12px; /* ← reemplaza tu padding: 8px 0 */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background: white;
-  border-top: none;
+  justify-content: center;
+  gap: 6px;
+  background: #fff;
 }
-
 .price {
+  width: 100%;
+  text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
+}
+.card-footer button {
+  margin: 0 8px; /* deja espacio para ver las líneas laterales */
 }
 
 .filtros {
@@ -67,4 +75,46 @@
 .btn-secondary.active {
   background: #6c757d;
   color: white;
+}
+
+/* --- Móvil --- */
+@media (max-width: 768px) {
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    height: 360px; /* altura igual para todas */
+  }
+
+  .card-img-top {
+    height: 200px; /* más pequeña para liberar espacio */
+    object-fit: cover;
+  }
+
+  .card-body {
+    flex-grow: 1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.2;
+    height: 2.4rem; /* máximo 2 líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-footer {
+    height: 70px; /* espacio reservado para precio + botón */
+  padding: 10px 12px; /* aire lateral y vertical */    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra precio y botón */
+    gap: 6px;
+  }
+  .price {
+    font-size: 1.1rem;
+  }
 }

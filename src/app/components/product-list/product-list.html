@@ -25,17 +25,21 @@
 </div>
 <hr>
     @for (product of productosFiltrados(); track product.id; let i = $index) {
-         <div class="col-md-6 col-lg-4 mb-4" [appScrollAnimation]="i * 100 + 'ms'">
-      <div class="card product-card h-100" [routerLink]="['/product', product.id]">
+         <div class="col-6 col-md-4 col-lg-3 mb-4" [appScrollAnimation]="i * 100 + 'ms'">
+      <div class="card product-card " [routerLink]="['/product', product.id]">
         <img [src]="'/api1' + product.imagenes[0]?.imageUrl" class="card-img-top" [alt]="product.name" style="object-position: center;">
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.description }}</p>
         </div>
-        <div class="card-footer">
-          <span class="price">{{ product.price | currency:'CHF' }}</span>
-          <button class="btn btn-detail btn-dark">Details</button>
-        </div>
+      <div class="card-footer d-flex flex-column align-items-center gap-2">
+  <span class="price fs-4 fw-bold text-dark">
+    {{ product.price | currency:'CHF' }}
+  </span>
+
+  <button class="btn btn-dark w-100">
+    Details
+  </button>
+</div>
       </div>
     </div>
     }
